@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,20 +18,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Some Fact goes here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGN-Ow-vaF">
-                                <rect key="frame" x="20" y="166" width="560" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQU-e4-cMm">
+                                <rect key="frame" x="40" y="480" width="520" height="40"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vv4-eU-QGF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Show Another FunFact"/>
+                                <connections>
+                                    <action selector="showFunFact" destination="BYZ-38-t0r" eventType="touchUpInside" id="jla-wy-hK5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Did you know?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOE-rO-q0o">
+                                <rect key="frame" x="40" y="127" width="112" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQU-e4-cMm">
-                                <rect key="frame" x="210" y="285" width="180" height="30"/>
-                                <state key="normal" title="Show Another FunFact"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CGN-Ow-vaF">
+                                <rect key="frame" x="40" y="268" width="520" height="65"/>
+                                <string key="text">You are born with 300 bones; by the time you are an adult you will have 206. You are born with 300 bones; by the time you are an adult you will have 206.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.3529411764705882" green="0.73333333333333328" blue="0.70980392156862748" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.35294117650000001" green="0.73333333329999995" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="rQU-e4-cMm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="09M-8u-Xet"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="CGN-Ow-vaF" secondAttribute="trailing" constant="20" id="Hna-Xr-oW4"/>
+                            <constraint firstItem="JOE-rO-q0o" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="LAZ-nK-4iJ"/>
+                            <constraint firstItem="JOE-rO-q0o" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="107" id="PH6-lk-QN4"/>
+                            <constraint firstItem="CGN-Ow-vaF" firstAttribute="top" secondItem="JOE-rO-q0o" secondAttribute="bottom" constant="120" id="dkS-gI-I1V"/>
+                            <constraint firstItem="CGN-Ow-vaF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="ee0-Lb-e6E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rQU-e4-cMm" secondAttribute="trailing" constant="20" id="fiD-1T-Ixp"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rQU-e4-cMm" secondAttribute="bottom" constant="80" id="nkZ-sF-IgU"/>
+                            <constraint firstItem="CGN-Ow-vaF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="o5r-By-aRf"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="dkS-gI-I1V"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="factsButton" destination="rQU-e4-cMm" id="tDw-0W-y9N"/>
                         <outlet property="funFactLabel" destination="CGN-Ow-vaF" id="R7g-N4-vb0"/>
                     </connections>
                 </viewController>
